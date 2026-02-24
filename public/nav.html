@@ -1,13 +1,19 @@
 <div class="nav">
   <img class="navLogo" src="/assets/img/logo.svg" alt="" />
   <div class="selection">
-    <div class="navItem"><img src="/assets/img/home.svg" alt=""/><a class="navLink" href="/">Home</a></div>
-    <div class="navItem">
-      <img src="/assets/img/controller.svg" alt="" /><a class="navLink" href="/g">Games</a>
+    <div class="navItem" onclick="window.location.replace('/')">
+      <img src="/assets/img/home.svg" alt="" /><a class="navLink">Home</a>
     </div>
-    <div class="navItem"><img src="/assets/img/cpu.svg" alt="" /><a class="navLink" href="/chat">Chat</a></div>
-    <div class="navItem">
-      <img src="/assets/img/speechBub.svg" alt="" /><a class="navLink" href="/ai">AI</a>
+    <div class="navItem" onclick="window.location.replace('/g')">
+      <img src="/assets/img/controller.svg" alt="" /><a class="navLink"
+        >Games</a
+      >
+    </div>
+    <div class="navItem" onclick="window.location.replace('/chat')">
+      <img src="/assets/img/cpu.svg" alt="" /><a class="navLink">Chat</a>
+    </div>
+    <div class="navItem" onclick="window.location.replace('/ai')">
+      <img src="/assets/img/speechBub.svg" alt="" /><a class="navLink">AI</a>
     </div>
   </div>
 </div>
