@@ -41,7 +41,7 @@
   flex-direction: column;
   width: 220px;
   padding: 20px 10px;
-  height: auto;
+  height: 100%;
   border-radius: 20px;
   border-right: 1px solid #ffffff15;
   z-index: 10;
@@ -75,6 +75,13 @@
   margin: auto;
   transition: background-color 0.2s;
   cursor: pointer;
+}
+.navLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }
 .navItem:hover {
   background-color: #64646441;
