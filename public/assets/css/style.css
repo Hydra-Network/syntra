@@ -23,7 +23,8 @@ body {
   width: calc(100% - 250px);
   border-radius: 20px;
   margin-left: 20px;
-  overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
 }
 img {
   margin: 0px;
