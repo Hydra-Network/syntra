@@ -1,0 +1,20 @@
+<body></body>
+<script>
+  window.onload = async () => {
+    let file_name = localStorage.getItem("gName");
+    try {
+      let response = await fetch(
+        `https://cdn.jsdelivr.net/gh/Hydra-Network/hydra-assets@main/${file_name}`,
+      );
+      let text = await response.text();
+      document.body.innerHTML = "";
+      const range = document.createRange();
+      const fragment = range.createContextualFragment(text);
+      document.body.appendChild(fragment);
+
+      console.log("Game loaded!");
+    } catch (err) {
+      console.error("Error fetching game file:", err);
+    }
+  };
+</script>
