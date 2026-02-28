@@ -1,6 +1,5 @@
 body {
   background: #080808;
-  overflow: hidden;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -9,6 +8,8 @@ body {
   padding: 20px;
   padding-left: 0px;
   -webkit-font-smoothing: antialiased;
+    height: auto;
+
 }
 .allGcontainer {
   display: flex;
@@ -54,6 +55,7 @@ h3 {
   height: calc(100% - 100px);
   display: flex;
   flex-direction: column;
+
 }
 .g {
   position: relative;
@@ -75,22 +77,21 @@ h3 {
   height: 100%;
   width: 100%;
 }
-.gImg:hover {
-  filter: brightness(0.6);
+.g:hover .gImg {
+  filter: brightness(0.5);
   transform: scale(1.05);
 }
 .gTitle {
-  position: absolute;
-  z-index: 3;
+  z-index: 2;
   margin-top: 170px;
-  margin-right: 240px;
   transition-duration: 0.3s;
+  margin-right: auto;
   opacity: 0;
 }
 
 .g:hover .gTitle {
   opacity: 1;
-  margin-right: 220px;
+  margin-left: 1vw;
 }
 .content-bg::after {
   position: absolute;
@@ -104,14 +105,15 @@ h3 {
   height: 100vh !important;
 }
 .gFrame {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   border-radius: 10px;
   border: none;
   z-index: -1;
-  top: 0;
-  background-color: transparent;
+  opacity: 0;
+  background-color: black;
+  top: 0px;
 }
 #goBackBtn {
   position: fixed;

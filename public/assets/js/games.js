@@ -16,13 +16,23 @@ const render_gmes = (games) => {
     gme_list.appendChild(card);
   });
 };
+const frame = document.getElementById("gFrame");
 
 const open_gme = async (file_name) => {
   localStorage.setItem("gName", file_name);
-  const frame = document.getElementById("gFrame");
   frame.src = "/g/gSrc.html";
   frame.style.zIndex = "1000";
+  frame.style.opacity = "1";
+  const goBackBtn = document.getElementById("goBackBtn");
+  goBackBtn.style.top = "20px";
 };
+goBackBtn.addEventListener("click", () => {
+  frame.style.zIndex = "-10";
+  frame.src = "";
+  document.documentElement.style.overflow = "";
+  goBackBtn.style.top = "-80px";
+  frame.style.opacity = "0";
+});
 
 gmes_search.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
