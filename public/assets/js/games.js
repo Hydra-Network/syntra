@@ -9,10 +9,10 @@ const render_gmes = (games) => {
     const card = document.createElement("div");
     card.className = "g";
     card.innerHTML = `
-<h3 class="gTitle">${game.title}</h3>
-						<img class="gImg" src='https://raw.githubusercontent.com/Hydra-Network/hydra-assets/main/${game.thumb}'
+<h3 class="gTitle">${game.name}</h3>
+						<img class="gImg" src='https://gitlab.com/skysthelimit.dev/selenite/-/raw/main/semag/${game.directory}/${game.image}'
 		alt = "" > `;
-    card.addEventListener("click", () => open_gme(game.file_name));
+    card.addEventListener("click", () => open_gme(game.directory));
     gme_list.appendChild(card);
   });
 };
@@ -45,7 +45,7 @@ gmes_search.addEventListener("input", (e) => {
 (async () => {
   try {
     const res = await fetch(
-      "https://cdn.jsdelivr.net/gh/Hydra-Network/bromine@main/src/data/gmes.json",
+      "/assets/list.json",
     );
     gmes_data = await res.json();
     render_gmes(gmes_data);

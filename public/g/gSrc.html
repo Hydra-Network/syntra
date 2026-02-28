@@ -1,12 +1,14 @@
-<body></body>
+<body>
+</body>
 <script>
   window.onload = async () => {
     let file_name = localStorage.getItem("gName");
     try {
       let response = await fetch(
-        `https://raw.githubusercontent.com/Hydra-Network/hydra-assets/refs/heads/main/gmes/${file_name}`,
+        `https://selenite.global.ssl.fastly.net/resources/semag/${file_name}/index.html`,
       );
-      console.log(response);
+      console.log("response: ");
+      console.log( response);
       let text = await response.text();
       console.log(text);
       document.body.innerHTML = "";
