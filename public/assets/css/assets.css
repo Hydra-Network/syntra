@@ -86,3 +86,7 @@
 .navItem:hover {
   background-color: #64646441;
 }
+.filler {
+  position: absolute;
+  opacity: 0;
+}
