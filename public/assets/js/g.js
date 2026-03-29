@@ -21,7 +21,7 @@ const render_gmes = (games) => {
     }
 
     card.innerHTML = `
-    <img id="pin" class="pin" src="/assets/img/pin.png" onclick="togglePin('${game.file_name}')" loading="lazy">
+    <img id="pin" class="pin" src="/syntra/assets/img/pin.png" onclick="togglePin('${game.file_name}')" loading="lazy">
     <h3 class="gTitle">${game.title}</h3>
 		<img onclick="open_gme('${game.file_name}')" id="gImg" class="gImg" src="https://raw.githubusercontent.com/Hydra-Network/hydra-assets/main/${game.thumb}" loading="lazy"
 		alt = "" > `;
@@ -31,7 +31,7 @@ const frame = document.getElementById("gFrame");
 const pin = document.getElementById("pin");
 const open_gme = async (file_name) => {
   localStorage.setItem("gName", file_name);
-  frame.src = "/g/gSrc.html";
+  frame.src = "/syntra/g/gSrc.html";
   frame.style.zIndex = "1000";
   frame.style.opacity = "1";
   const goBackBtn = document.getElementById("goBackBtn");

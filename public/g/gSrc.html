@@ -23,7 +23,7 @@
     let file_name = localStorage.getItem("gName");
     try {
       let response = await fetch(
-        "https://raw.githubusercontent.com/Hydra-Network/hydra-assets/refs/heads/main/gmes/${file_name}?t=${Date.now()}",
+        `https://raw.githubusercontent.com/Hydra-Network/hydra-assets/refs/heads/main/gmes/${file_name}?t=${Date.now()}`,
       );
       let html = await response.text();
       const doc = frame.contentDocument;
