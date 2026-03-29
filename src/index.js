@@ -2,7 +2,7 @@ const fastify = require("fastify")({ logger: false });
 const path = require("node:path");
 const fastifyStatic = require("@fastify/static");
 const { gsap } = require("gsap/dist/gsap");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 
 fastify.register(fastifyStatic, {
   root: path.join(__dirname, "..", "public"),
