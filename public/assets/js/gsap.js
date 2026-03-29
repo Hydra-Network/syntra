@@ -1,4 +1,4 @@
-import { gsap } from "/modules/gsap/index.js";
+import { gsap } from "/syntra/modules/gsap/index.js";
 gsap.fromTo(
   ".logo",
   {
