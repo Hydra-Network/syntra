@@ -7,12 +7,10 @@ const host = process.env.HOST || "0.0.0.0";
 
 fastify.register(fastifyStatic, {
   root: path.join(__dirname, "..", "public"),
-  prefix: "/syntra/",
 });
-
 fastify.register(fastifyStatic, {
   root: path.join(__dirname, "..", "node_modules"),
-  prefix: "/syntra/modules/",
+  prefix: "/modules/",
   decorateReply: false,
 });
 fastify.listen({ port: port, host: host }, (err) => {

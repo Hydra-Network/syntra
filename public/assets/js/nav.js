@@ -1,4 +1,4 @@
-fetch("/syntra/nav.html")
+fetch("/nav.html")
   .then((response) => response.text())
   .then((html) => {
     const navContainer = document.createElement("div");
