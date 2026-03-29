@@ -31,7 +31,7 @@ const frame = document.getElementById("gFrame");
 const pin = document.getElementById("pin");
 const open_gme = async (file_name) => {
   localStorage.setItem("gName", file_name);
-  frame.src = "/g/gSrc.html";
+  frame.src = "/syntra/g/gSrc.html";
   frame.style.zIndex = "1000";
   frame.style.opacity = "1";
   const goBackBtn = document.getElementById("goBackBtn");
