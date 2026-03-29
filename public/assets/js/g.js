@@ -21,7 +21,7 @@ const render_gmes = (games) => {
     }
 
     card.innerHTML = `
-    <img id="pin" class="pin" src="/assets/img/pin.png" onclick="togglePin('${game.file_name}')" loading="lazy">
+    <img id="pin" class="pin" src="/syntra/assets/img/pin.png" onclick="togglePin('${game.file_name}')" loading="lazy">
     <h3 class="gTitle">${game.title}</h3>
 		<img onclick="open_gme('${game.file_name}')" id="gImg" class="gImg" src="https://raw.githubusercontent.com/Hydra-Network/hydra-assets/main/${game.thumb}" loading="lazy"
 		alt = "" > `;
