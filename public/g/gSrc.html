@@ -1,19 +1,37 @@
-<body></body>
+<iframe id="gFrame" src="" frameborder="0"></iframe>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+  }
+  #gFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+    opacity: 0;
+  }
+</style>
 <script>
   window.onload = async () => {
+    const frame = document.getElementById("gFrame");
     let file_name = localStorage.getItem("gName");
     try {
       let response = await fetch(
-        `https://raw.githubusercontent.com/Hydra-Network/hydra-assets/refs/heads/main/gmes/${file_name}`,
+        `https://raw.githubusercontent.com/Hydra-Network/hydra-assets/refs/heads/main/gmes/${file_name}?t=${Date.now()}`
       );
-      console.log(response);
-      let text = await response.text();
-      console.log(text);
-      document.body.innerHTML = "";
-      const range = document.createRange();
-      const fragment = range.createContextualFragment(text);
-      document.body.appendChild(fragment);
-
+      let html = await response.text();
+      const doc = frame.contentDocument;
+      doc.open();
+      doc.write(html);
+      doc.close();
+      frame.onload = () => {
+        frame.style.opacity = 1;
+      };
       console.log("Game loaded!");
     } catch (err) {
       console.error("Error fetching game file:", err);
